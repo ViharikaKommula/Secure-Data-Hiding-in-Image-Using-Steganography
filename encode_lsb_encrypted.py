@@ -22,7 +22,7 @@ def encode_lsb(image_path, data, key):
 
     for row in pixels:
         for pixel in row:
-            for channel in range(3):  # Iterate over RGB channels
+            for channel in range(3): 
                 if data_index < data_length:
                     pixel[channel] = int(format(pixel[channel], '08b')[:-1] + binary_data[data_index], 2)
                     data_index += 1
