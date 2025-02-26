@@ -17,7 +17,6 @@ def decode_lsb(image_path, key):
             for channel in range(3):
                 binary_data += format(pixel[channel], '08b')[-1]
 
-    # Split by 8 bits and stop at the end marker
     all_bytes = [binary_data[i:i+8] for i in range(0, len(binary_data), 8)]
     encrypted_data = bytearray()
     for byte in all_bytes:
